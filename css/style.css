@@ -1,0 +1,477 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+body {
+  position: relative;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 70px;
+  /* border-bottom: 1px solid #eee; */
+  background-color: rgba(255, 255, 255, 1);
+
+  z-index: 1000;
+  transition: 0.2s;
+}
+
+header.posTop {
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.2s;
+}
+
+.posTop > div > div > ul > li > a {
+  color: white !important;
+}
+
+header.hoverTop {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 95%;
+  height: 100%;
+  /* background-color: white; */
+  /* border-bottom: 1.2px solid #eee; */
+  z-index: 1100;
+}
+
+.logoBox {
+  align-content: center;
+  width: 15%;
+  height: 100%;
+}
+
+.menuBox {
+  position: relative;
+  align-content: center;
+  width: 70%;
+  height: 100%;
+}
+
+.icBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+}
+
+.colorSoopLogo {
+  position: relative;
+  width: 70px;
+  height: 36px;
+  background-image: url("../image/colorSoopLogo.svg");
+  background-repeat: no-repeat;
+}
+
+.posTop > div > div > .colorSoopLogo {
+  position: relative;
+  right: 13px;
+  display: block;
+  width: 100px;
+  height: 46px;
+  background-image: url("../image/soopLogo.svg");
+  background-repeat: no-repeat;
+}
+
+.colorSoopLogo > a {
+  position: absolute;
+  width: 70px;
+  height: 36px;
+}
+
+#gnb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+#gnb > li {
+  height: 100%;
+}
+
+#gnb > li > a {
+  display: flex;
+  align-items: center;
+  padding: 0 27px;
+  height: 100%;
+  font-size: 16px;
+  color: #5e636e;
+}
+
+.depth2_bg {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 60px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.depth2_bg.on {
+  visibility: visible;
+  opacity: 1;
+}
+
+.depth2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 60px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.depth2.on {
+  visibility: visible;
+  opacity: 1;
+}
+
+.depth2 > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 22px;
+}
+
+.depth2 > li > a {
+  padding: 12px;
+  color: #757b8a;
+}
+
+.depth2 > li > a:hover {
+  padding: 12px;
+  color: black;
+}
+
+.setLang {
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../image/colorEarthIcon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.posTop .setLang {
+  background-image: url("../image/earthIcon.svg");
+}
+
+.lang {
+  font-size: 19px;
+  background-color: transparent;
+}
+
+.lang:hover {
+  cursor: pointer;
+}
+
+.posTop .lang {
+  color: white;
+}
+
+.underArrow {
+  margin-left: 8px;
+  width: 8px;
+  height: 8px;
+  background-image: url("../image/underTheArrow.svg");
+}
+
+.posTop .underArrow {
+  background-image: url("../image//whiteCheck.svg");
+}
+
+.layerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  align-items: start;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 80px;
+  padding: 22px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  opacity: 0;
+}
+.layerBox > button {
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.layerBox > button:nth-child(1) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: rgb(6, 70, 177);
+}
+
+.checkIcon {
+  position: relative;
+  bottom: 1px;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../image/checkIcon.svg");
+}
+
+.layerBox.on {
+  opacity: 1;
+}
+
+.st1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 640px;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 300%;
+  height: 640px;
+  transform: 0.5s;
+}
+
+.imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imgBox > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.soopLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 357px;
+  height: 163px;
+  background-image: url("../image/soopLogo.svg");
+}
+
+.banner3Text {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 163px;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+}
+
+/* tabs 스타일 */
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 28px;
+  width: 2%;
+  height: 20px;
+}
+
+.tabs > div {
+  width: 12px;
+  height: 12px;
+}
+
+.tabs > div:nth-child(1) {
+  margin-right: 14px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tabs > div:nth-child(2) {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tabs > div.on {
+  background-color: white;
+}
+
+.stopBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 52%;
+  transform: translateX(-50%);
+  bottom: 28px;
+  width: 1.2%;
+  height: 22px;
+}
+
+.stopBtn {
+  position: relative;
+  top: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  background-image: url("../image/stopBtn.svg");
+  background-repeat: no-repeat;
+}
+
+.stopBtn.on {
+  background-image: url("../image/playBtn.svg");
+}
+
+/* tabs 스타일 끝 */
+
+/* 중간 배너 시작 */
+.main_info_wrap {
+  /* display: flex; */
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 705px;
+  margin-top: 60px;
+  padding: 0 48px;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  height: 100%;
+  margin: auto;
+}
+
+.vt_wrap {
+  position: relative;
+  width: 49%;
+  height: 100%;
+}
+
+.inner > div:nth-child(2) {
+  background-color: blue;
+}
+
+.career_box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/subBanner.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+}
+
+.career_box > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.txt_wrap {
+  position: absolute;
+  top: 33px;
+  left: 32px;
+  padding-right: 24px;
+}
+
+.sec_tit {
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  line-height: 1.39;
+  font-weight: 600;
+}
+
+.always_recuit_list_name {
+  margin-top: 15px;
+}
+
+.always_recuit_list_name > li {
+  position: relative;
+  overflow: hidden;
+  max-width: 240px;
+  padding-left: 5px;
+  color: #555;
+  font-size: 14px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.more {
+  position: relative;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 124px;
+  height: 40px;
+  margin: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+  font-weight: 500;
+  z-index: 20;
+}
