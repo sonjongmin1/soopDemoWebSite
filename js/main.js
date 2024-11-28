@@ -39,14 +39,17 @@ header.addEventListener("mouseover", function () {
 
 header.addEventListener("mouseout", function () {
   header.classList.remove("hoverTop");
-  header.classList.add("posTop");
+  if (window.scrollY === 0) {
+    // 스크롤이 0일 때만 posTop 추가
+    header.classList.add("posTop");
+  }
 });
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     header.classList.remove("posTop");
   } else {
-    header.classList.add("posTop");
+    header.classList.add("posTop"); // 스크롤이 0일 때만 posTop 추가
   }
 });
 
@@ -157,3 +160,42 @@ stopBtn.addEventListener("click", function () {
 });
 
 /* tabs 구현 끝*/
+
+/*보도자료 이미지 슬라이딩 구현*/
+
+let prevBtn = document.querySelector(".prevBtn");
+let nextBtn = document.querySelector(".nextBtn");
+let new_list_wrap = document.querySelector(".new_list_wrap");
+let moveCount = 0;
+let ctMoveSize = 490;
+prevBtn.classList.add("on");
+
+prevBtn.addEventListener("click", function () {
+  if (moveCount > 0) {
+    moveCount--;
+    if (moveCount < 3) {
+      nextBtn.classList.remove("on");
+    }
+    if (moveCount == 0) {
+      prevBtn.classList.add("on");
+    }
+    new_list_wrap.style.transform = `translateX(-${moveCount * ctMoveSize}px)`; // 음수 유지
+    console.log(moveCount);
+  }
+});
+
+nextBtn.addEventListener("click", function () {
+  if (moveCount < 3) {
+    moveCount++;
+    if (moveCount > 0) {
+      prevBtn.classList.remove("on");
+    }
+    if (moveCount == 3) {
+      nextBtn.classList.add("on");
+    }
+    new_list_wrap.style.transform = `translateX(-${moveCount * ctMoveSize}px)`;
+  }
+  console.log(moveCount);
+});
+
+/*보도자료 이미지 슬라이딩 구현끝*/
