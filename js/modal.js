@@ -1,12 +1,22 @@
 /*모달창 구현*/
 
 let modalBox = document.querySelector(".modalBox");
-let posterImg = document.querySelectorAll(".posterBox > a ");
+let posterImg = document.querySelectorAll(".posterBox > a");
 let modalBoxImg = document.querySelector(".modalBoxImg");
+
+function isMobile() {
+  return window.innerWidth <= 768; // 768px 이하를 모바일로 간주
+}
 
 posterImg.forEach(function (k, index) {
   k.addEventListener("click", function (e) {
     e.preventDefault();
+
+    if (isMobile()) {
+      console.log("모바일에서는 모달이 작동하지 않습니다.");
+      return; // 모바일에서는 모달 열기 방지
+    }
+
     modalBox.classList.add("on");
     if (index == 0) {
       modalBoxImg.classList.add("img1");

@@ -992,4 +992,7 @@
   .mbHambar {
     display: none;
   }
+  .mbModalMainBox {
+    display: none;
+  }
 }
