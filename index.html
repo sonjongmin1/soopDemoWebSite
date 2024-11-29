@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOOP Demo</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
   </head>
   <body>
     <header class="posTop">
@@ -213,7 +216,7 @@
         <h3 class="sec_tit">보도 자료</h3>
         <div class="new_list">
           <ul class="new_list_wrap">
-            <li>
+            <li class="posterBox">
               <a href="#">
                 <div class="info_wrap">
                   <span class="date">2024-11-22</span>
@@ -227,7 +230,7 @@
                 </span>
               </a>
             </li>
-            <li>
+            <li class="posterBox">
               <a href="#">
                 <div class="info_wrap">
                   <span class="date">2024-11-22</span>
@@ -241,7 +244,7 @@
                 </span>
               </a>
             </li>
-            <li>
+            <li class="posterBox">
               <a href="#">
                 <div class="info_wrap">
                   <span class="date">2024-11-21</span>
@@ -255,7 +258,7 @@
                 </span>
               </a>
             </li>
-            <li>
+            <li class="posterBox">
               <a href="#">
                 <div class="info_wrap">
                   <span class="date">2024-11-20</span>
@@ -269,7 +272,7 @@
                 </span>
               </a>
             </li>
-            <li>
+            <li class="posterBox">
               <a href="#">
                 <div class="info_wrap">
                   <span class="date">2024-11-18</span>
@@ -280,7 +283,7 @@
                 </span>
               </a>
             </li>
-            <li>
+            <li class="posterBox">
               <a href="#">
                 <div class="info_wrap">
                   <span class="date">2024-11-15</span>
@@ -335,11 +338,20 @@
     <!-- 모달창 구현 -->
 
     <div class="modalBox">
-      <div class="modalInBox"></div>
+      <div class="modalInBox">
+        <div class="modalBoxImg"></div>
+      </div>
     </div>
 
     <!-- 모달창 구현 끝 -->
 
-    <script src="./js/main.js"></script>
+    <!-- 페이지 상단으로 이동 버튼-->
+    <div class="arrowBtn"></div>
+    <!-- 페이지 상단으로 이동 버튼 끝-->
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/slide.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/scrollToTop.js"></script>
   </body>
 </html>
