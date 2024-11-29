@@ -88,6 +88,7 @@
           </ul>
         </div>
         <div class="icBox">
+          <div class="mbHambar"></div>
           <div class="setLang"></div>
           <div>
             <button class="lang">KR</button>
@@ -112,7 +113,7 @@
         <div class="imgBox">
           <img src="./image/main_banner3.jpg" alt="#" />
           <div class="banner3Text">
-            A WORD WHERE EVERYTHING<br />
+            A WORD WHERE <br class="t_br" />EVERYTHING<br />
             BECOMES CONTENT.
           </div>
         </div>
@@ -121,12 +122,13 @@
           <div class="soopLogo"></div>
         </div>
       </div>
+
       <div class="tabs">
         <div class="on"></div>
         <div></div>
-      </div>
-      <div class="stopBox">
-        <div class="stopBtn"></div>
+        <div class="stopBox">
+          <div class="stopBtn"></div>
+        </div>
       </div>
     </section>
     <!-- 컨턴츠 -->
@@ -213,7 +215,14 @@
     <!-- 보도자료 -->
     <section class="main_new_wrap">
       <div class="inner">
-        <h3 class="sec_tit">보도 자료</h3>
+        <div class="controllerBox">
+          <h3 class="sec_tit">보도 자료</h3>
+          <div class="controller">
+            <div class="prevBtn"></div>
+            <div class="nextBtn"></div>
+          </div>
+        </div>
+
         <div class="new_list">
           <ul class="new_list_wrap">
             <li class="posterBox">
@@ -299,10 +308,6 @@
             </li>
           </ul>
         </div>
-        <div class="controller">
-          <div class="prevBtn"></div>
-          <div class="nextBtn"></div>
-        </div>
       </div>
     </section>
     <!-- 보도자료 끝 -->
@@ -318,11 +323,15 @@
           <div class="policyCenBox">
             <ul class="policyCenTxt">
               <li>
-                경기도 성남시 분당구 판교로228번길 15 판교세븐벤처밸리 1단지 2동
-                (삼평동)
+                경기도 성남시 분당구<br class="t_br" />
+                판교로228번길 15 판교세븐벤처밸리 1단지 2동 (삼평동)
               </li>
               <span>|</span>
-              <li>TEL : 1688-7022</li>
+
+              <li>
+                TEL : 1688-7022
+                <span class="mbPolicy">| FAX : 031-622-8008</span>
+              </li>
               <span>|</span>
               <li>FAX : 031-622-8008</li>
             </ul>
@@ -330,10 +339,14 @@
           </div>
         </div>
         <div class="family">
-          <a href="#" class="familyBox">FAMILY SITE &nbsp;&nbsp;+</a>
+          <a href="#" class="familyBox"
+            ><div>FAMILY SITE</div>
+            <div>+</div></a
+          >
         </div>
       </div>
     </footer>
+    <div class="mbFooter"></div>
     <!-- footer구현 끝-->
     <!-- 모달창 구현 -->
 
@@ -345,9 +358,43 @@
 
     <!-- 모달창 구현 끝 -->
 
+    <!-- 모바일 모달창 구현 -->
+
+    <!-- 모바일 모달창 구현 끝-->
+
     <!-- 페이지 상단으로 이동 버튼-->
     <div class="arrowBtn"></div>
     <!-- 페이지 상단으로 이동 버튼 끝-->
+    <div class="mbModalBox">
+      <div class="mbModalInBox">
+        <div class="mbModalLogoBox">
+          <div></div>
+          <div class="colseX"></div>
+        </div>
+      </div>
+      <ul class="mbModalMainBox">
+        <li>
+          <span>회사소개</span> <span class="mbUnderArrow"></span>
+          <ul></ul>
+        </li>
+        <li>
+          <span>사업소개</span> <span class="mbUnderArrow"></span>
+          <ul></ul>
+        </li>
+        <li>
+          <span>미디어룸</span> <span class="mbUnderArrow"></span>
+          <ul></ul>
+        </li>
+        <li>
+          <span>투자정보</span>
+          <ul></ul>
+        </li>
+        <li>
+          <span>채용정보</span>
+          <ul></ul>
+        </li>
+      </ul>
+    </div>
 
     <script src="./js/menu.js"></script>
     <script src="./js/slide.js"></script>

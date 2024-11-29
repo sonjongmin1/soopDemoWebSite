@@ -34,3 +34,19 @@ modalBox.addEventListener("click", () => {
 // modalBox.classList.remove("on");
 
 /*모달창 구현 끝*/
+
+// 모바일 모달창 구현
+let mbHambar = document.querySelector(".mbHambar");
+
+let mbModalBox = document.querySelector(".mbModalBox");
+
+let colseX = document.querySelector(".colseX");
+
+mbHambar.addEventListener("click", function () {
+  mbModalBox.classList.add("on");
+});
+
+colseX.addEventListener("click", function () {
+  mbModalBox.classList.remove("on");
+});
+// 모바일 모달창 구현끝
