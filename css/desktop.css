@@ -82,6 +82,18 @@
     height: 100%;
   }
 
+  .posTop > .top > .icBox > .login > a {
+    font-size: 19px;
+    margin-right: 12px;
+    color: #fff;
+  }
+
+  .login > a {
+    font-size: 19px;
+    margin-right: 12px;
+    color: #000;
+  }
+
   .colorSoopLogo {
     position: relative;
     width: 70px;
