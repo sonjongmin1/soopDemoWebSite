@@ -108,8 +108,8 @@ prevBtn.classList.add("on");
 
 prevBtn.addEventListener("click", function () {
   if (isMobile()) {
-    console.log("모바일에서는 모달이 작동하지 않습니다.");
-    return; // 모바일에서는 모달 열기 방지
+    console.log("확인");
+    return;
   }
   if (moveCount > 0) {
     moveCount--;
@@ -126,8 +126,8 @@ prevBtn.addEventListener("click", function () {
 
 nextBtn.addEventListener("click", function () {
   if (isMobile()) {
-    console.log("모바일에서는 모달이 작동하지 않습니다.");
-    return; // 모바일에서는 모달 열기 방지
+    console.log("확인");
+    return;
   }
   if (moveCount < 3) {
     moveCount++;
@@ -147,7 +147,7 @@ nextBtn.addEventListener("click", function () {
 /*모바일*/
 prevBtn.addEventListener("click", function () {
   if (!isMobile()) {
-    console.log("데스크탑에서는 모달이 작동하지 않습니다.");
+    console.log("확인");
     return;
   }
   if (moveCount > 0) {
@@ -165,7 +165,7 @@ prevBtn.addEventListener("click", function () {
 
 nextBtn.addEventListener("click", function () {
   if (!isMobile()) {
-    console.log("데스크탑에서는 모달이 작동하지 않습니다.");
+    console.log("확인");
     return;
   }
   if (moveCount < 6) {
