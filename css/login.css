@@ -26,8 +26,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80%;
-  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  /* height: 80%; */
 }
 
 .loginBox {
@@ -271,6 +271,9 @@ body {
   align-items: center;
   width: 100%;
   height: 20%;
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+  z-index: 10;
 }
 
 .no-outline {
@@ -284,11 +287,13 @@ body {
 }
 
 .footer > ul {
+  position: relative;
   display: flex;
   margin-bottom: 10px;
 }
 
 .footer > ul > li {
+  position: relative;
   color: #525661;
   font-size: 13px;
   margin: 5px;
@@ -332,7 +337,7 @@ body {
 .flayer {
   display: none;
   position: absolute;
-  bottom: 80%;
+  bottom: 30px;
   border: 1px solid transparent;
   border-color: rgba(117, 123, 138, 0.2);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.04),
@@ -394,7 +399,21 @@ footer > .adr {
 }
 
 .footer > p {
+  width: 100%;
+  text-align: center;
   font-size: 12px;
   color: #525661;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    display: none;
+  }
 }

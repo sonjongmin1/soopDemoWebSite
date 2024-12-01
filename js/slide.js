@@ -92,16 +92,25 @@ stopBtn.addEventListener("click", function () {
 
 /* tabs 구현 끝*/
 
-/*보도자료 이미지 슬라이딩 구현*/
+/*보도자료 이미지 슬라이딩 데스크탑 구현*/
+
+function isMobile() {
+  return window.innerWidth <= 768; // 768px 이하를 모바일로 간주
+}
 
 let prevBtn = document.querySelector(".prevBtn");
 let nextBtn = document.querySelector(".nextBtn");
 let new_list_wrap = document.querySelector(".new_list_wrap");
 let moveCount = 0;
 let ctMoveSize = 490;
+let mbMoverSize = 265;
 prevBtn.classList.add("on");
 
 prevBtn.addEventListener("click", function () {
+  if (isMobile()) {
+    console.log("모바일에서는 모달이 작동하지 않습니다.");
+    return; // 모바일에서는 모달 열기 방지
+  }
   if (moveCount > 0) {
     moveCount--;
     if (moveCount < 3) {
@@ -116,6 +125,10 @@ prevBtn.addEventListener("click", function () {
 });
 
 nextBtn.addEventListener("click", function () {
+  if (isMobile()) {
+    console.log("모바일에서는 모달이 작동하지 않습니다.");
+    return; // 모바일에서는 모달 열기 방지
+  }
   if (moveCount < 3) {
     moveCount++;
     if (moveCount > 0) {
@@ -129,4 +142,41 @@ nextBtn.addEventListener("click", function () {
   // console.log(moveCount);
 });
 
-/*보도자료 이미지 슬라이딩 구현끝*/
+/*보도자료 이미지 슬라이딩 데스크탑 구현끝*/
+
+/*모바일*/
+prevBtn.addEventListener("click", function () {
+  if (!isMobile()) {
+    console.log("데스크탑에서는 모달이 작동하지 않습니다.");
+    return;
+  }
+  if (moveCount > 0) {
+    moveCount--;
+    if (moveCount < 6) {
+      nextBtn.classList.remove("on");
+    }
+    if (moveCount == 0) {
+      prevBtn.classList.add("on");
+    }
+    new_list_wrap.style.transform = `translateX(-${moveCount * mbMoverSize}px)`; // 음수 유지
+    console.log(moveCount);
+  }
+});
+
+nextBtn.addEventListener("click", function () {
+  if (!isMobile()) {
+    console.log("데스크탑에서는 모달이 작동하지 않습니다.");
+    return;
+  }
+  if (moveCount < 6) {
+    moveCount++;
+    if (moveCount > 0) {
+      prevBtn.classList.remove("on");
+    }
+    if (moveCount == 6) {
+      nextBtn.classList.add("on");
+    }
+    new_list_wrap.style.transform = `translateX(-${moveCount * mbMoverSize}px)`;
+  }
+  console.log(moveCount);
+});

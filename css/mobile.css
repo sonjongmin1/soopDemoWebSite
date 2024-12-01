@@ -80,8 +80,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
+    width: 100px;
     height: 100%;
+  }
+
+  .icBox > .login {
+    margin-right: 10px;
+  }
+
+  .posTop > .top > .icBox > .login > a {
+    color: white;
+  }
+
+  .login > a {
+    color: #000;
   }
 
   .colorSoopLogo {
