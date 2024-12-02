@@ -21,12 +21,13 @@ body {
   height: 100vh;
 }
 
-.loginLayer {
+.memberLayer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding-bottom: 10px;
+  margin-bottom: 100px;
   /* height: 80%; */
 }
 
@@ -69,14 +70,142 @@ body {
   height: 25px;
   margin: 18px 0;
   text-align: center;
-  font-size: 15px;
-  color: #525661;
+  font-size: 18px;
+  color: #1559ff;
 }
 
-.idBox {
+.memberBox {
+  margin-top: 20px;
+  text-align: center;
+  align-content: center;
   width: 380px;
-  height: 48px;
+  height: 50px;
+  background-color: #2e6afd;
+  border-radius: 3px;
 }
+
+.memberBox > a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.memberBox2 {
+  position: relative;
+  text-align: center;
+  align-content: center;
+  width: 380px;
+  height: 50px;
+  background-color: #2e6afd;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.memberBox2 > a {
+  font-size: 14px;
+  color: white;
+}
+
+.memberBox2 > a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4.5%;
+  width: 24px;
+  height: 24px;
+  background-image: url(../image/memberTwit.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.memberBox3 {
+  position: relative;
+  text-align: center;
+  align-content: center;
+  width: 380px;
+  height: 50px;
+  background-color: #1ec800;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.memberBox3 > a {
+  font-size: 14px;
+  color: white;
+}
+
+.memberBox3 > a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  width: 24px;
+  height: 24px;
+  background-image: url(../image/memberNaver.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.memberBox4 {
+  position: relative;
+  text-align: center;
+  align-content: center;
+  width: 380px;
+  height: 50px;
+  background-color: #fee500;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.memberBox4 > a {
+  font-size: 14px;
+  color: #000;
+}
+
+.memberBox4 > a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5%;
+  width: 49px;
+  height: 48px;
+  background-image: url(../image/kakaoIcon.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.memberBox5 {
+  position: relative;
+  text-align: center;
+  align-content: center;
+  width: 380px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.memberBox5 > a {
+  font-size: 14px;
+  color: #fff;
+}
+
+.memberBox5 > a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5%;
+  width: 49px;
+  height: 48px;
+  background-image: url(../image/appleIcon.svg);
+  background-position: center;
+  background-size: cover;
+}
+
 .pwBox {
   width: 380px;
   height: 48px;
