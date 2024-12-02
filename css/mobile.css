@@ -1003,6 +1003,10 @@
     color: #aaa;
   }
 
+  .familyTxt > .t_br {
+    display: none;
+  }
+
   .policyCenBox {
     margin-top: 20px;
     color: #aaa;

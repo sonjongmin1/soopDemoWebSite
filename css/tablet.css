@@ -836,6 +836,10 @@
     color: #aaa;
   }
 
+  .familyTxt > .t_br {
+    display: block;
+  }
+
   .policyCenBox {
     margin-top: 20px;
     color: #aaa;
