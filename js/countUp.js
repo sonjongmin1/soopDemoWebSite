@@ -18,10 +18,10 @@ window.addEventListener("scroll", function () {
       if (countUp >= 900) {
         clearInterval(stopCount);
       } else {
-        countUp += 5;
+        countUp += 2;
         rang.innerHTML = countUp.toLocaleString();
       }
-    }, 1);
+    }, 10);
   }
 });
 
@@ -52,10 +52,10 @@ window.addEventListener("scroll", function () {
       if (countUp >= 900) {
         clearInterval(stopCount);
       } else {
-        countUp += 5;
+        countUp += 2;
         rang.innerHTML = countUp.toLocaleString();
       }
-    }, 1);
+    }, 10);
   }
 });
 
