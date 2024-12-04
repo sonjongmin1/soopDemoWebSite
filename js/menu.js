@@ -2,7 +2,6 @@
 let gnbMenus = document.querySelectorAll("#gnbMenu");
 let depth2_bg = document.querySelector(".depth2_bg");
 let depth2 = document.querySelectorAll(".depth2");
-let flag = false;
 
 gnbMenus.forEach((menu, index) => {
   menu.addEventListener("mouseover", () => {

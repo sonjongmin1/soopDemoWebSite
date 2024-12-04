@@ -4,6 +4,8 @@ let imgBoxs = document.querySelectorAll(".imgBox");
 let count = 0;
 let stop = "";
 
+slider.style.transition = "0.5s";
+
 // 0진짜이미지 1 2가짜이미지
 function showImg(index) {
   slider.style.transform = `translateX(-${(index * 100) / imgBoxs.length}%)`;
@@ -23,8 +25,8 @@ function autoSlide() {
     count++;
     if (count == imgBoxs.length) {
       //count는 1
-      slider.style.transition = "none";
       count = 0;
+      slider.style.transition = "none";
       slider.style.transform = "translateX(0)";
       setTimeout(() => {
         slider.style.transition = "0.5s";
@@ -62,14 +64,16 @@ autoSlide();
 /*이미지 슬라이딩 구현 끝*/
 
 let tabs = document.querySelectorAll(".tabs > div");
+let slideFlag = false;
 /* tabs 구현 */
 tabs.forEach((item, i) => {
   item.addEventListener("click", function () {
     stopImg();
     count = i;
+    console.log(count);
     showImg(count);
     // *** setTimeout 멈춘것을 다시실행하기 위해 사용
-    if (!flag) {
+    if (!slideFlag) {
       autoSlide(); // 2초 뒤 슬라이더 재시작
     }
   });
@@ -79,14 +83,14 @@ let stopBtn = document.querySelector(".stopBtn");
 let platBtn = document;
 
 stopBtn.addEventListener("click", function () {
-  if (!flag) {
+  if (!slideFlag) {
     stopBtn.classList.add("on");
     stopImg();
-    flag = true;
+    slideFlag = true;
   } else {
     stopBtn.classList.remove("on");
     autoSlide();
-    flag = false;
+    slideFlag = false;
   }
 });
 
