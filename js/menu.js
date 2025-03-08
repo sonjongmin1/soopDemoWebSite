@@ -35,6 +35,10 @@ header.addEventListener("mouseover", function () {
   header.classList.remove("posTop");
 });
 
+header.addEventListener("click", function () {
+  header.classList.remove("hoverTop");
+});
+
 header.addEventListener("mouseout", function () {
   header.classList.remove("hoverTop");
   if (window.scrollY === 0) {

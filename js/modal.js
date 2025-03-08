@@ -47,16 +47,18 @@ modalBox.addEventListener("click", () => {
 
 // 모바일 모달창 구현
 let mbHambar = document.querySelector(".mbHambar");
-
 let mbModalBox = document.querySelector(".mbModalBox");
-
 let colseX = document.querySelector(".colseX");
+let body = document.querySelector("body");
 
 mbHambar.addEventListener("click", function () {
   mbModalBox.classList.add("on");
+  body.classList.add("no_scroll");
 });
 
 colseX.addEventListener("click", function () {
   mbModalBox.classList.remove("on");
+  body.classList.remove("no_scroll");
 });
+
 // 모바일 모달창 구현끝
