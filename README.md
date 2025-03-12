@@ -1,5 +1,9 @@
 # 🖥️ PROJECT
-### SOOP
+### [SOOP](https://sonjongmin1.github.io/soopDemoWebSite/)
+
+<h3>
+  <a href="https://sonjongmin1.github.io/soopDemoWebSite/" target="_blank">SOOP</a>
+</h3>
 
 ## 🕰️ Project duration / Development 
 ### 2024.10 ~ 2024.11 / Solo Dev 
