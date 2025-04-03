@@ -1,5 +1,5 @@
 # 🖥️ PROJECT
-### NIKE
+### SOOP
 
 ## 🕰️ Project duration / Development 
 ### 2024.10 ~ 2024.11 / Solo Dev 
